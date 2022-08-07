@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horoskop</title>
+</head>
+<body>
+    <h1>Program Horoskop</h1>
+    <button onclick="changeLuck()">Click Here!</button>
+    <hr>
+    <h1 id="horoskop"></h1>
+    <script>
+        document.querySelector("button").onclick = function changeLuck() {
+            const randomNumber = Date.now();
+        // console.log(randomNumber);
+            if(randomNumber % 3 === 0) {
+                document.getElementById("horoskop"). innerHTML = "Hebat!"
+                    // console.log("Hebat");
+            } else if(randomNumber % 5 === 0) {
+                document.getElementById("horoskop").innerHTML = "Mengerikan!"
+                    // console.log("Mengerikan!");
+            } else {
+                document.getElementById("horoskop").innerHTML = "Boleh Juga!"
+                    // console.log("Boleh Juga!");
+                }
+        }
+    </script>
+</body>
+</html>
